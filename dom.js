@@ -92,3 +92,46 @@ queryIdBtn.addEventListener("click", ()=>{
 btnByIndex.addEventListener("click", ()=>{
     queryTag.textContent="This is query Selector tag changed"
 })
+
+
+// getAttribute() এবং setAttribute()
+
+const img = document.querySelector("img")
+const imgBtn = document.getElementById("imgBtn")
+console.log(img.getAttribute('src'))
+
+
+imgBtn.addEventListener("click", ()=>{
+    const currentSrc = img.getAttribute("src")
+    if(currentSrc==="img.avif"){
+        img.setAttribute("src", "sky.avif")
+    }else{
+        img.setAttribute("src", "img.avif")
+    }
+
+
+})
+
+// direct property access
+// img.src ="sky.avif"
+
+const input = document.querySelector("input")
+input.value="default value"
+input.placeholder="write your name"
+
+// play with css
+
+const div = document.getElementById("div")
+const divBtn = document.getElementById("divBtn")
+div.style.background="black"
+div.style.width="200px"
+div.style.height="200px"
+div.style.borderRadius= "20px"
+// div.style.marginTop="20px"
+
+// class list add/remove
+
+div.classList.add("add")
+divBtn.addEventListener("click",()=>{
+    div.classList.remove("add")
+})
