@@ -121,12 +121,12 @@ input.placeholder="write your name"
 
 // play with css
 
-const div = document.getElementById("div")
-const divBtn = document.getElementById("divBtn")
-div.style.background="black"
-div.style.width="200px"
-div.style.height="200px"
-div.style.borderRadius= "20px"
+// const div = document.getElementById("div")
+// const divBtn = document.getElementById("divBtn")
+// div.style.background="black"
+// div.style.width="200px"
+// div.style.height="200px"
+// div.style.borderRadius= "20px"
 // div.style.marginTop="20px"
 
 // class list add/remove
@@ -159,3 +159,54 @@ container.insertAdjacentHTML('afterend','<p>After end</p>')
 // container.innerHTML=''
 container.firstChild.remove()
 container.lastChild.remove()
+
+const testEvent = document.getElementById("testEvent")
+const eventBtn = document.getElementById("eventBtn")
+
+//  all event
+
+// click event
+// eventBtn.addEventListener("click", ()=>{
+//     testEvent.style.background="red"
+// })
+
+// dbl click
+// eventBtn.addEventListener("dblclick", ()=>{
+//     testEvent.style.fontSize="20px"
+// })
+
+// mouse event
+// eventBtn.addEventListener('mouseenter',()=>{
+//     testEvent.style.border="1px solid red"
+// })
+
+// mouse leave
+eventBtn.addEventListener("mouseleave", ()=>{
+    testEvent.style.border="1px solid red"
+})
+// input event
+const inputEvent = document.getElementById("input")
+const submit = document.getElementById("submit")
+const form = document.getElementById("form")
+// inputEvent.addEventListener("input", (e)=>{
+//     console.log("current value", e.target.value)
+// })
+// inputEvent.addEventListener("change",(e)=>{
+//     console.log("change value",e.target.value )
+// })
+
+inputEvent.addEventListener("keydown",(e)=>{
+    console.log(e.key)
+    console.log(e.code)
+    console.log(e.altKey)
+})
+inputEvent.addEventListener("focus", ()=>{
+    inputEvent.style.background="gray"
+})
+inputEvent.addEventListener("blur", ()=>{
+    inputEvent.style.borderColor="red"
+})
+form.addEventListener("submit",(e)=>{
+    e.preventDefault()
+    console.log("submitted")
+})
