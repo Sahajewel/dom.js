@@ -1,6 +1,15 @@
 .add{
-    margin-bottom: 20px;
-    margin-top: 30px;
+    background-color: red !important;
+}
+.box{
+    background-color: aqua;
+    font-size: 20px;
+    border-radius: 20px;
+    width: 150px;
+    height: 150px;
+    padding: 5px;
+    text-align: center;
+    align-items: center;
 }
 .remove{
     font-size: 20px;

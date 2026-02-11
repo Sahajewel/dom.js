@@ -131,7 +131,31 @@ div.style.borderRadius= "20px"
 
 // class list add/remove
 
-div.classList.add("add")
+// div.classList.add("add")
 divBtn.addEventListener("click",()=>{
-    div.classList.remove("add")
+    div.classList.toggle("add")
+    if(div.classList.contains("add")){
+        console.log("ase")
+    }else{
+    console.log("nai")
+    }
 })
+
+// create element
+const newDiv = document.createElement("div")
+newDiv.textContent="This is my div";
+newDiv.classList.add("box")
+document.body.appendChild(newDiv)
+
+// adjacent element
+const container = document.getElementById("container")
+container.classList.add("box")
+container.insertAdjacentHTML('beforebegin', '<p>before begin</p>')
+container.insertAdjacentHTML('afterbegin','<p>after begin</p>')
+container.insertAdjacentHTML('beforeend','<p>before end</p>')
+container.insertAdjacentHTML('afterend','<p>After end</p>')
+// container.remove()
+// container.parentNode.removeChild(container)
+// container.innerHTML=''
+container.firstChild.remove()
+container.lastChild.remove()
