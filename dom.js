@@ -223,3 +223,21 @@ child.addEventListener("click", ()=>{
 childPara.addEventListener("click", ()=>{
     console.log("parent to child")
 },true)
+
+//  event delegation
+
+const parentList = document.getElementById("parentList")
+const items = document.querySelectorAll("li")
+parentList.addEventListener("click", (event)=>{
+ console.log("parent to child")
+
+
+},false)
+items.forEach((item)=>{
+   item.addEventListener("click",(event)=>{
+    console.log("child to parent",event.target.innerText)
+   })
+})
+const newItem = document.createElement("li")
+newItem.innerText="item-4"
+parentList.appendChild(newItem)
