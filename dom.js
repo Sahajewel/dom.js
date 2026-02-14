@@ -210,3 +210,16 @@ form.addEventListener("submit",(e)=>{
     e.preventDefault()
     console.log("submitted")
 })
+
+
+// next Event Bubbling এবং Capturing 🫧
+// event bubbling bottom to top and capturing top to bottom to go
+
+const child = document.getElementById("child")
+const childPara = document.getElementById("childPara")
+child.addEventListener("click", ()=>{
+    console.log("child to parent")
+})
+childPara.addEventListener("click", ()=>{
+    console.log("parent to child")
+},true)
