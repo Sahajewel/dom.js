@@ -226,18 +226,38 @@ childPara.addEventListener("click", ()=>{
 
 //  event delegation
 
-const parentList = document.getElementById("parentList")
-const items = document.querySelectorAll("li")
-parentList.addEventListener("click", (event)=>{
- console.log("parent to child")
+// const parentList = document.getElementById("parentList")
+// const items = document.querySelectorAll("li")
+// parentList.addEventListener("click", (event)=>{
+//  console.log("parent to child")
 
 
-},false)
-items.forEach((item)=>{
-   item.addEventListener("click",(event)=>{
-    console.log("child to parent",event.target.innerText)
-   })
-})
-const newItem = document.createElement("li")
-newItem.innerText="item-4"
-parentList.appendChild(newItem)
+// },false)
+// items.forEach((item)=>{
+//    item.addEventListener("click",(event)=>{
+//     console.log("child to parent",event.target.innerText)
+//    })
+// })
+// const newItem = document.createElement("li")
+// newItem.innerText="item-4"
+// parentList.appendChild(newItem)
+
+// DOM Traversing - Navigate করা
+const me = document.getElementById("me")
+const clickMe = document.getElementById("clickMe")
+const parent = document.getElementById("parent")
+// clickMe.addEventListener("click", ()=>{
+//     const youngerBro = me.nextElementSibling
+//     const elderBro = me.previousElementSibling
+//     const baba = me.parentElement
+//    youngerBro.style.color="red"
+//    elderBro.style.background="gray"
+//    baba.style.border="1px solid green"
+//    baba.children
+// })
+
+const baba = parent.lastElementChild
+const childBtn = parent.querySelector("#clickMe")
+baba.style.color="red"
+childBtn.style.border="1px solid green"
+childBtn.style.color="blue"
